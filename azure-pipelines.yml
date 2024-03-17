@@ -30,6 +30,7 @@ stages:
     displayName: Deploy to EC2
     pool:
       vmImage: 'ubuntu-latest'
+      parallel: 1
     steps:
     - task: SSH@0
       displayName: 'SSH to EC2'
