@@ -10,13 +10,10 @@ class FinancialDataResponse(BaseModel):
     value: float
     type: str
 
-
 class FinancialDataRequest(BaseModel):
     description: str
     value: float
     type: str
-
-
 
 @router.get("/", response_model=List[FinancialDataResponse])
 def list_counts():
