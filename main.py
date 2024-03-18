@@ -1,8 +1,6 @@
 from fastapi import FastAPI
+from financial.routes import financial_routes
 
 app = FastAPI()
 
-
-@app.get("/items/{item_id}")
-async def read_item(item_id: str):
-    return {"item_id": item_id}
+app.include_router(financial_routes.router)

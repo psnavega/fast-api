@@ -1,8 +1,0 @@
-version: 0.0
-Resources:
-  - TargetService:
-      Type: AWS::EC2::Instance
-      Properties:
-        Image: "psnavega/fast-api-example:0.0"
-        ContainerName: "api"
-        ContainerPort: "3100"
